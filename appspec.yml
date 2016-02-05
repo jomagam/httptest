@@ -4,9 +4,9 @@ files:
   - source: /html
     destination: /var/www/html
 hooks:
-  BeforeInstall
+  BeforeInstall:
     - location: scripts/cleanup
       runas: root
-  ApplicationStart
+  ApplicationStart:
     - location: scripts/restart
       runas: root
