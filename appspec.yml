@@ -3,6 +3,10 @@ os: linux
 files:
   - source: /html
     destination: /var/www/html
-#hooks:
-#    ApplicationStart
-#      - location: scripts/restart
+hooks:
+  BeforeInstall
+    - location: scripts/cleanup
+      runas: root
+  ApplicationStart
+    - location: scripts/restart
+      runas: root
