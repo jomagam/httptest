@@ -3,6 +3,6 @@ os: linux
 files:
   - source: /html
     destination: /var/www/html
-hooks:
-    ApplicationStart
-      - location: scripts/restart
+#hooks:
+#    ApplicationStart
+#      - location: scripts/restart
